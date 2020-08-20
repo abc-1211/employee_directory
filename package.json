@@ -7,7 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --progress",
     "build": "webpack --config webpack.config.js",
-    "ian": "react-scripts start"
   },
   "repository": {
     "type": "git",
