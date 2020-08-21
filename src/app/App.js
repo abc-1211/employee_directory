@@ -9,13 +9,38 @@ class App extends Component {
         employees
     }
 
+    sortByIdAsc = () => {
+        employees.sort((a,b) => (a.id - b.id));
+        this.setState({ employees });
+    }
+
+    sortByNameAsc = () => {
+        employees.sort((a,b) => (a.name.localeCompare(b.name)));
+        this.setState({ employees });
+    }
+
+    sortByPhoneAsc = () => {
+        employees.sort((a,b) => (a.phone - b.phone));
+        this.setState({ employees });
+    }
+
+    sortByEmailAsc = () => {
+        employees.sort((a,b) => (a.email.localeCompare(b.email)));
+        this.setState({ employees });
+    }
+
     render() {
         return (
             <div>
                 <Navbar/>
                 <div className="container">
                     <table className="table text-center">
-                        <Table/>
+                        <Table
+                            sortById = {this.sortByIdAsc}
+                            sortByName = {this.sortByNameAsc}
+                            sortByPhone = {this.sortByPhoneAsc}
+                            sortByEmail = {this.sortByEmailAsc}
+                        />
                         {this.state.employees.map(employee => {
                                 return <TableContent
                                     key = {employee.id}
