@@ -2,8 +2,6 @@ const path = require('path');
 
 
 module.exports = {
-    mode: "development",
-    devtool: "none",
     devServer: {
         contentBase: path.resolve(__dirname, "./src"),
         historyApiFallback: true
