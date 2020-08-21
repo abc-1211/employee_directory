@@ -34,7 +34,7 @@ class App extends Component {
             <div>
                 <Navbar/>
                 <div className="container">
-                    <table className="table text-center">
+                    <table className="table">
                         <Table
                             sortById = {this.sortByIdAsc}
                             sortByName = {this.sortByNameAsc}
